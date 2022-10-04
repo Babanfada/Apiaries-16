@@ -1,0 +1,114 @@
+.footer__container {
+  /* border: 1px solid red; */
+  position: static;
+  bottom: 0%;
+  width: 100%;
+  background: linear-gradient(rgba(7, 7, 7, 0.719), rgba(26, 25, 25, 0.418)), url("../../images/dark.jpg");
+  padding: 7vh 5vw 4vh;
+  object-fit: cover;
+  /* display: grid;
+    place-items: center; */
+}
+.brand {
+  color: white;
+}
+.div1 {
+  display: flex;
+  flex-direction: column;
+}
+.div1 p {
+  color: white;
+  font-family: var(--ff-tertiary);
+}
+.icons {
+  display: flex;
+  gap: 1vw;
+  padding: 1vw;
+  color: red;
+}
+.icon {
+  
+  padding: 0.8vw;
+  font-size: 3rem;
+  border-radius: 5px;
+  background-color: var(--global-color-accent-2);
+  cursor: pointer;
+}
+.navbar-brand {
+  font-size: larger;
+}
+.brand {
+  color: white;
+   font-size: var(--fs-heading-1);
+   font-family: var(--ff-tertiary);
+}
+.logo {
+  width: 5vw;
+  /* border: 1px solid red; */
+}
+/* .logo_footer {
+  border: 1px solid red;
+  background-color: blueviolet;
+  color: white;
+} */
+.footer__nav {
+  text-decoration: none;
+  color: white;
+  font-family: var(--ff-tertiary);
+}
+.footer__nav li:hover{
+    transform: translateX(5px);
+    transition: 0.8s linear;
+}
+/* .footer__nav li:hover{
+    color: pink;
+} */
+
+.col-sm {
+  /* border: 1px solid red; */
+  border-bottom: 2px solid var(--global-color-accent-2);
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  padding-bottom: 5vh;
+}
+
+.col-sm h4 {
+  /* border: 1px solid red; */
+  color: var(--global-color-accent-2);
+  padding-bottom: 4vh;
+  border-bottom: 2px solid var(--global-color-accent-2);
+  font-family: var(--ff-tertiary);
+}
+.col-sm ul {
+  /* border: 1px solid red; */
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+.add {
+  color: var(--global-color-accent-2);
+  display: flex;
+  gap: 1vw;
+}
+.add p{
+    font-family: var(--ff-tertiary);
+    color: white;
+}
+
+.sub__footer {
+  padding-top: 5vh;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+.sub__footer p{
+    font-family: var(--ff-tertiary);
+}
+@media (max-width: 776px) {
+  .icon {
+    font-size: 1.5rem;
+   
+  }
+}
