@@ -1,11 +1,15 @@
-.navbar {
-  border: 1px solid red;
-}
+/* .navbar {
+  
+  /* position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%); 
+} */
 .mycontainer {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   position: relative;
 }
 .list__items {
@@ -17,6 +21,14 @@
   position: relative;
   margin-top: 15px;
   padding-top: 10px;
+}
+.closeBtn {
+  display: none;
+  color: white;
+  background-color: black;
+  position: absolute;
+  top: 3%;
+  left: 90%;
 }
 
 .navbar-brand {
@@ -98,8 +110,9 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 0 2vw 3vw;
+  padding: 0 1vw 3vw;
   gap: 1vw;
+
   display: none;
   background-color: transparent;
   box-shadow: 5px 2px 10px #eef38d, -5px 10px #f2e4ba;
@@ -141,27 +154,40 @@
     position: absolute;
     top: 100%;
     left: 70%;
-    background: rgb(2, 0, 36);
-    background: radial-gradient(
-      circle,
-      rgba(2, 0, 36, 1) 0%,
-      rgba(227, 234, 181, 0.37016805013020837) 63%,
-      rgba(0, 212, 255, 1) 100%
-    );
+    background: rgb(235, 229, 219);
     padding: 5vh 10vw;
     white-space: nowrap;
     border-radius: 10px;
-    gap: 8vw;
-    /* display: none!important; */
+    gap: 9vw;
+    height: auto;
   }
 
+  .closeBtn {
+    display: block;
+    cursor: pointer;
+  }
+  .showList {
+    display: none;
+  }
+  .hideList {
+    display: flex;
+  }
+  .navlink li {
+    width: auto;
+    height: auto;
+  }
+  .position {
+    position: relative;
+  }
   .navlink li ul {
-    position: absolute;
-    top: 80px;
-    left: -60px;
-    padding: 3vw;
-    width: 20vw;
     box-shadow: none;
+    background-color: transparent;
+  }
+  .navlink:hover li ul {
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    left: 0;
   }
 
   .input button {
@@ -181,8 +207,8 @@
     font-size: 6vw;
   }
   .logo {
-    width: 14vw;
-    height: 12vw;
+    width: 10vw;
+    height: 8vw;
   }
   .input button {
     border-radius: 5px;
@@ -191,6 +217,6 @@
   }
   .list__items {
     left: 5%;
-   
+    gap: 12vw;
   }
 }

@@ -14,7 +14,7 @@ import Team from "./pages/Team/Team";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NavBar from "./pages/NavBar/NavBar";
 import Footer from "./pages/Footer/Footer";
-import Pratice from "./pages/Pratice";
+//import Pratice from "./pages/Pratice";
 
 
 const App = () => {

@@ -1,15 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import Honey from "../../images/my images/apiaries_16.jpg";
 import { Link, NavLink } from "react-router-dom";
 import Button from "react-bootstrap/Button";
-import { RiSearchLine, RiArrowDropDownFill} from "react-icons/ri";
+import { RiSearchLine, RiArrowDropDownFill } from "react-icons/ri";
 import { CgMenuGridR } from "react-icons/cg";
+import { FaRegWindowClose } from "react-icons/fa";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.css";
 import "./NavBar.css";
 const NavBar = () => {
   const mystyle = {
-    textDecoration:"none"
-  }
+    textDecoration: "none"
+  };
+  const [isNavShowing, setisNavShowing] = useState(false);
+  const showList = () => {
+    setisNavShowing(!isNavShowing);
+  };
+  // const hideList = () => {
+  //   setisNavShowing(isNavShowing);
+  // };
+
   return (
     <nav className="navbar container-sm">
       <div className="container mycontainer">
@@ -18,13 +27,13 @@ const NavBar = () => {
           Apiaries 16
         </Link>
 
-        <ul className="list__items">
+        <ul className={`list__items ${isNavShowing ? "hideList" : "showList"}`}>
           <NavLink activeClassName="acitve" className="navlink" to="/">
             <li>Home</li>
           </NavLink>
 
           <NavLink activeClassName="acitve" className="navlink" to="/About">
-            <li>
+            <li className="position">
               About Us <RiArrowDropDownFill />
               <ul>
                 <NavLink style={mystyle} activeClassName="active" to="/Team">
@@ -45,7 +54,7 @@ const NavBar = () => {
             <li>Products</li>
           </NavLink>
           <NavLink activeClassName="acitve" className="navlink" to="/Story">
-            <li>
+            <li className="position">
               Story <RiArrowDropDownFill />
               <ul className="gallery">
                 <NavLink style={mystyle} activeClassName="active" to="/Gallery">
@@ -68,7 +77,11 @@ const NavBar = () => {
             <RiSearchLine className="lens" />
           </Button>
         </div>
-        <CgMenuGridR className="menu" />
+        {isNavShowing ? (
+          <FaRegWindowClose className="menu" onClick={showList} />
+        ) : (
+          <CgMenuGridR className="menu" onClick={showList} />
+        )}
       </div>
     </nav>
   );

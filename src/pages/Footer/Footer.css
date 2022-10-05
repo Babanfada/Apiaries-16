@@ -1,9 +1,11 @@
 .footer__container {
   /* border: 1px solid red; */
-  position: static;
+  /* position: absolute;
   bottom: 0%;
   width: 100%;
-  background: linear-gradient(rgba(7, 7, 7, 0.719), rgba(26, 25, 25, 0.418)), url("../../images/dark.jpg");
+  height: fit-content; */
+  background: linear-gradient(rgba(7, 7, 7, 0.719), rgba(26, 25, 25, 0.418)),
+    url("../../images/dark.jpg");
   padding: 7vh 5vw 4vh;
   object-fit: cover;
   /* display: grid;
@@ -27,7 +29,6 @@
   color: red;
 }
 .icon {
-  
   padding: 0.8vw;
   font-size: 3rem;
   border-radius: 5px;
@@ -39,8 +40,8 @@
 }
 .brand {
   color: white;
-   font-size: var(--fs-heading-1);
-   font-family: var(--ff-tertiary);
+  font-size: var(--fs-heading-1);
+  font-family: var(--ff-tertiary);
 }
 .logo {
   width: 5vw;
@@ -56,9 +57,9 @@
   color: white;
   font-family: var(--ff-tertiary);
 }
-.footer__nav li:hover{
-    transform: translateX(5px);
-    transition: 0.8s linear;
+.footer__nav li:hover {
+  transform: translateX(5px);
+  transition: 0.8s linear;
 }
 /* .footer__nav li:hover{
     color: pink;
@@ -92,9 +93,9 @@
   display: flex;
   gap: 1vw;
 }
-.add p{
-    font-family: var(--ff-tertiary);
-    color: white;
+.add p {
+  font-family: var(--ff-tertiary);
+  color: white;
 }
 
 .sub__footer {
@@ -103,12 +104,13 @@
   justify-content: space-between;
   color: white;
 }
-.sub__footer p{
-    font-family: var(--ff-tertiary);
+.sub__footer p {
+  font-family: var(--ff-tertiary);
 }
+
+/* ......media query 777px........ */
 @media (max-width: 776px) {
   .icon {
     font-size: 1.5rem;
-   
   }
 }
