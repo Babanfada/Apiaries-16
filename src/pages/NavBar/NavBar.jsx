@@ -7,13 +7,19 @@ import { CgMenuGridR } from "react-icons/cg";
 import { FaRegWindowClose } from "react-icons/fa";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.css";
 import "./NavBar.css";
+
 const NavBar = () => {
   const mystyle = {
     textDecoration: "none"
   };
   const [isNavShowing, setisNavShowing] = useState(false);
+  const [isInputShowing, setisInputShowing] = useState(false);
+
   const showList = () => {
     setisNavShowing(!isNavShowing);
+  };
+  const showInputBar = event => {
+    setisInputShowing(!isInputShowing);
   };
   // const hideList = () => {
   //   setisNavShowing(isNavShowing);
@@ -72,8 +78,19 @@ const NavBar = () => {
         </ul>
 
         <div className="input">
-          <input type="text" id="search__bar" placeholder="search..." />
-          <Button type="submit">
+          <input
+            type="text"
+            id="search__bar"
+            placeholder="search..."
+            // className={`${isInputShowing ? "hideList" : "showList"}`}
+          />
+
+          {/* <input
+            type="text"
+            id= "search__bar"
+            placeholder="search..."
+          /> */}
+          <Button type="submit" onClick={showInputBar}>
             <RiSearchLine className="lens" />
           </Button>
         </div>

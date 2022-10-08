@@ -9,7 +9,6 @@ import { BsTelephone } from "react-icons/bs";
 import { ImMail3 } from "react-icons/im";
 import { GiBee, GiBeehive } from "react-icons/gi";
 
-
 const Footer = () => {
   return (
     <div className="container-fluid footer__container">
@@ -96,7 +95,7 @@ const Footer = () => {
           </div>
           <div className="add">
             <ImMail3 />
-            <p>apaiaiessixteen@gmail.com</p>
+            <p>apiariessixteen@gmail.com</p>
           </div>
         </div>
       </div>
@@ -110,5 +109,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-

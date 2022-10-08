@@ -202,7 +202,13 @@
 @media (max-width: 540px) {
   #search__bar {
     display: none;
+
   }
+  
+  #search_bar2{
+    display: block;
+  }
+  
   .menu {
     font-size: 6vw;
   }
