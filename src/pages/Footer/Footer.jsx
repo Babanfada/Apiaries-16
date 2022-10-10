@@ -12,8 +12,8 @@ import { GiBee, GiBeehive } from "react-icons/gi";
 const Footer = () => {
   return (
     <div className="container-fluid footer__container">
-      <div class="row">
-        <div class="col-md-5 col-sm div1">
+      <div className="row">
+        <div className="col-md-5 col-sm div1">
           <Link className="navbar-brand brand" to="/">
             <GiBee />
             <GiBeehive />
@@ -46,7 +46,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div class="col-md-2 col-sm">
+        <div className="col-md-2 col-sm">
           <h4>Quick Links</h4>
           <ul>
             <Link className="footer__nav" to="/">
@@ -66,7 +66,7 @@ const Footer = () => {
             </Link>
           </ul>
         </div>
-        <div class="col-md-2 col-sm">
+        <div className="col-md-2 col-sm">
           <h4>More Links</h4>
           <ul>
             <Link className="footer__nav" to="/Contact">
@@ -83,7 +83,7 @@ const Footer = () => {
             </Link>
           </ul>
         </div>
-        <div class="col-md-3 col-sm">
+        <div className="col-md-3 col-sm">
           <h4>Contact Info</h4>
           <div className="add">
             <VscLocation />

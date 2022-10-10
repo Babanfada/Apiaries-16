@@ -1,3 +1,4 @@
+import "../node_modules/bootstrap/dist/css/bootstrap.css"
 import "./index.css";
 import React from "react";
 import About from "./pages/About/About";
@@ -15,7 +16,6 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NavBar from "./pages/NavBar/NavBar";
 import Footer from "./pages/Footer/Footer";
 //import Pratice from "./pages/Pratice";
-
 
 const App = () => {
   return (

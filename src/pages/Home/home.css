@@ -1,10 +1,11 @@
+/* .......section 1..... */
 .home {
   /* border: 1px solid red; */
   margin: 2vh 0;
   position: relative;
 }
 .rowContainer {
-  padding: 5vh 5vw;
+  padding: 2vh 5vw;
 }
 
 .fresh {
@@ -52,7 +53,7 @@
   width: 4vw;
   height: auto;
 }
-
+/* .....section 2........ */
 .bees {
   /* border: 1px solid red; */
   display: grid;
@@ -143,6 +144,32 @@
   border-radius: 10px;
   background-color: var(--global-color-primary);
 }
+
+/* .......section 3........ */
+.local {
+  border: 1px solid red;
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+}
+.local h1 span {
+  color: var(--global-color-primary);
+  font-family: var(--ff-tertiary);
+}
+.local h1 {
+  font-family: var(--ff-tertiary);
+  white-space: nowrap;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+  /* border: 1px solid red; */
+  gap: 6vw;
+}
+
+/* .....Media Query...... */
 @media (max-width: 576px) {
   .small-image-1 {
     display: none;
