@@ -160,6 +160,7 @@
     border-radius: 10px;
     gap: 9vw;
     height: auto;
+    z-index: 5;
   }
 
   .closeBtn {

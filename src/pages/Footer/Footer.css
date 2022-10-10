@@ -92,6 +92,7 @@
   color: var(--global-color-accent-2);
   display: flex;
   gap: 1vw;
+  align-items: flex-start;
 }
 .add p {
   font-family: var(--ff-tertiary);
