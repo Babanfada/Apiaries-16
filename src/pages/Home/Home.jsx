@@ -81,7 +81,7 @@ const Home = () => {
         </div>
       </div>
       {/* .........section 3...... */}
-      <div className="container-fluid rowContainer local ">
+      <div className="container-fluid local ">
         <h1>
           Our Local <span>Bee Farm</span>
         </h1>

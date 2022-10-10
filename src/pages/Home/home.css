@@ -88,7 +88,8 @@
   /* padding-top: 10vh; */
   margin-top: 15vh;
   /* display: flex;
-  gap: 2vw; */
+  justify-content: center; */
+  /* gap: 2vw; */ 
 }
 .honey {
   /* padding: 3vw; */
@@ -147,11 +148,13 @@
 
 /* .......section 3........ */
 .local {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   /* justify-content: center; */
   flex-direction: column;
   align-items: center;
+  margin-top: 4vh;
+  padding: 0;
 }
 .local h1 span {
   color: var(--global-color-primary);
@@ -167,6 +170,7 @@
   justify-content: space-evenly;
   /* border: 1px solid red; */
   gap: 6vw;
+  width: 90%;
 }
 
 /* .....Media Query...... */

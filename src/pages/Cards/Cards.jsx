@@ -11,7 +11,7 @@ function Cards(prop) {
   const mystyle2 = {
     backgroundColor: "#fcc500",
     clipPath: `polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%)`,
-    padding:"1vw"
+    padding: "1vw"
   };
   const myStyle3 = {
     backgroundColor: "white",
@@ -29,7 +29,8 @@ function Cards(prop) {
         borderRadius: "15px",
         padding: "0",
         position: "relative",
-        borderColor:"transparent"
+        borderColor: "transparent",
+        marginTop: "3vh"
       }}
     >
       <Card.Img variant="top" src={prop.img} alt=""></Card.Img>
