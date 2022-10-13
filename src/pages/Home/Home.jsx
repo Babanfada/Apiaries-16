@@ -9,6 +9,11 @@ import image9 from "../../images/small-image-2.png";
 import image10 from "../../images/working-bees.jpg";
 import image11 from "../../images/women.jpg";
 import image12 from "../../images/young.jpg";
+import image13 from "../../images/working-bees.jpg";
+import image14 from "../../images/bee1.jpg";
+import image15 from "../../images/bee2.jpg";
+import image16 from "../../images/bee3.jpg";
+import image17 from "../../images/bee4.jpg";
 
 import image5 from "../../images/image_2.jpg";
 import image3 from "../../images/image_3.jpg";
@@ -34,7 +39,9 @@ const Home = () => {
           </p>
           <Link to="/Gallery">
             {" "}
-            <Button variant="warning">View More</Button>{" "}
+            <Button variant="warning" className="button">
+              View More
+            </Button>{" "}
           </Link>
         </div>
 
@@ -123,6 +130,69 @@ const Home = () => {
             img2={image6}
           />
         </div>
+      </div>
+
+      {/* .............Section 4 ............ */}
+      <div className="container-md newsletter">
+        <div className="containing row">
+          <div className="join col-md-5">
+            <h1>
+              Join Our <span>Newsletter</span>
+            </h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
+              debitis esse dolorum sit nemo culpa ea ratione atque maiores
+              similique. Lorem ipsum dolor sit amet consectetur, adipisicing
+              elit. Nihil sit similique incidunt aliquam modi unde blanditiis
+              molestias pariatur quod?
+            </p>
+            <div className="input_sec">
+              <input
+                type="text"
+                name="input"
+                id="input"
+                placeholder="Email Address....."
+              />
+              <Button className="button" variant={"warning"}>
+                Subscribe
+              </Button>
+            </div>
+          </div>
+          <div className="col-md-1">hidden</div>
+          <div className="join-img col-md-6">
+            <img src={image13} alt="" srcset="" />
+          </div>
+        </div>
+      </div>
+      {/* ................Section 5......... */}
+      <div className="containergrid container-md">
+        
+          <div className="importance Area1 ">
+            <h1>
+              importance of Bees in <span>our Ecosystem</span>
+            </h1>
+          </div>
+          <div className="importance Area2 ">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis
+            consequuntur pariatur omnis possimus ullam. Saepe aliquid dolores,
+            quia praesentium aspernatur odit nisi adipisci necessitatibus
+            incidunt harum explicabo veniam facere dolor nemo suscipit ipsa
+            ratione voluptas a tempora quos cupiditate? Natus quaerat tempora
+            iure, magni ipsum mollitia suscipit modi tempore nihil. 
+          </div>
+          <div className="importance Area3">
+            <img src={image16} alt="" srcset="" />
+          </div>
+          <div className="importance Area4">
+            <img src={image17} alt="" srcset="" />
+          </div>
+          <div className="importance Area5">
+            <img src={image14} alt="" srcset="" />
+          </div>
+          <div className="importance Area6">
+            <img src={image15} alt="" srcset="" />
+          </div>
+      
       </div>
     </div>
   );
