@@ -222,40 +222,31 @@
 
 /* .......section 5....... */
 .containergrid {
-  /* border: 1px solid red; */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  /* grid-template-rows: auto auto auto auto; */
   gap: 2vw;
   margin-top: 10vh;
-  
-  /* height: 50vh; */
 }
-.importance {
-  /* border: 1px solid red; */
-}
-.importance img{
+.importance img {
   height: auto;
   border-radius: 20px;
 }
 .Area1 {
   grid-column: span 2;
 }
-.Area1 h1{
+.Area1 h1 {
   text-transform: capitalize;
   font-family: var(--ff-tertiary);
 }
-.Area1 h1 span{
-   color: var(--global-color-primary);
+.Area1 h1 span {
+  color: var(--global-color-primary);
   font-family: var(--ff-tertiary);
 }
 .Area2 {
   grid-column: span 2;
   grid-row: span 2;
-  /* width: auto; */
   font-family: var(--ff-primary);
-  color: var( --global-color-secondary);
-  
+  color: var(--global-color-secondary);
 }
 .Area3 {
   grid-row: span 3;
@@ -263,45 +254,14 @@
 }
 .Area4 {
   grid-column: span 1;
-  /* grid-row: span 2; */
 }
-.Area5{
+.Area5 {
   grid-row: span 3;
-  
 }
-.Area5 img{
-object-fit: cover;
-height: 100%;
-/* border: 1px solid blue; */
+.Area5 img {
+  object-fit: cover;
+  height: 100%;
 }
-.Area6 {
-  /* grid-row: span 3; */
-  /* grid-column: span 2; */
-}
-
-/* .containergrid {  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "Area0 Area1 Area1"
-    "Area2 Area4 Area3"
-    "Area2 Area5 Area3";
-}
-
-.Area1 { grid-area: Area1; }
-
-.Area2 { grid-area: Area2; }
-
-.Area3 { grid-area: Area3; }
-
-.Area4 { grid-area: Area4; }
-
-.Area5 { grid-area: Area5; }
-
-.Area0 { grid-area: Area0; }
- */
 
 /* .....Media Query...... */
 @media (max-width: 576px) {
@@ -311,9 +271,6 @@ height: 100%;
   .small-image-6 {
     display: none;
   }
-  /* .second {
-    margin-top: 25vh;
-  } */
   .containergrid {
     display: flex;
     flex-direction: column;
