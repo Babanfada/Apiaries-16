@@ -34,20 +34,20 @@ const NavBar = () => {
         </Link>
 
         <ul className={`list__items ${isNavShowing ? "hideList" : "showList"}`}>
-          <NavLink activeClassName="acitve" className="navlink" to="/">
+          <NavLink activeclassname="acitve" className="navlink" to="/">
             <li>Home</li>
           </NavLink>
 
-          <NavLink activeClassName="acitve" className="navlink" to="/About">
+          <NavLink activeclassname="acitve" className="navlink" to="/About">
             <li className="position">
               About Us <RiArrowDropDownFill />
               <ul>
-                <NavLink style={mystyle} activeClassName="active" to="/Team">
+                <NavLink style={mystyle} activeclassname="active" to="/Team">
                   <li>Team</li>
                 </NavLink>
                 <NavLink
                   style={mystyle}
-                  activeClassName="active"
+                  activeclassname="active"
                   to="/Community"
                 >
                   <li>Community</li>
@@ -56,23 +56,23 @@ const NavBar = () => {
             </li>
           </NavLink>
 
-          <NavLink activeClassName="acitve" className="navlink" to="/Product">
+          <NavLink activeclassName="acitve" className="navlink" to="/Product">
             <li>Products</li>
           </NavLink>
-          <NavLink activeClassName="acitve" className="navlink" to="/Story">
+          <NavLink activeclassname="acitve" className="navlink" to="/Story">
             <li className="position">
               Story <RiArrowDropDownFill />
               <ul className="gallery">
-                <NavLink style={mystyle} activeClassName="active" to="/Gallery">
+                <NavLink style={mystyle} activeclassname="active" to="/Gallery">
                   <li>Gallery</li>
                 </NavLink>
-                <NavLink style={mystyle} activeClassName="active" to="/faqs">
+                <NavLink style={mystyle} activeclassname="active" to="/faqs">
                   <li>FAQ</li>
                 </NavLink>
               </ul>
             </li>
           </NavLink>
-          <NavLink activeClassName="acitve" className="navlink" to="/Contact">
+          <NavLink activeclassname="acitve" className="navlink" to="/Contact">
             <li>Contact Us</li>
           </NavLink>
         </ul>

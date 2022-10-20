@@ -14,13 +14,18 @@ import image14 from "../../images/bee1.jpg";
 import image15 from "../../images/bee2.jpg";
 import image16 from "../../images/bee3.jpg";
 import image17 from "../../images/bee4.jpg";
+import image18 from "../../images/Honey-removebg-preview.png";
+import image19 from "../../images/propolis-bee-removebg-preview.png";
+import image20 from "../../images/bee-pollen-in-a-pot-removebg-preview.png";
 
 import image5 from "../../images/image_2.jpg";
 import image3 from "../../images/image_3.jpg";
 import image4 from "../../images/image_4.jpg";
 import { Link } from "react-router-dom";
+import "../../../node_modules/bootstrap/dist/css/bootstrap.css";
 import "./home.css";
 import Cards from "../Cards/Cards";
+import ProductComponent from "../../ProductComponent/ProductComponent";
 
 const Home = () => {
   return (
@@ -160,39 +165,82 @@ const Home = () => {
           </div>
           <div className="col-md-1">hidden</div>
           <div className="join-img col-md-6">
-            <img src={image13} alt="" srcset="" />
+            <img src={image13} alt="image" />
           </div>
         </div>
       </div>
       {/* ................Section 5......... */}
       <div className="containergrid container-md">
-        
-          <div className="importance Area1 ">
-            <h1>
-              importance of Bees in <span>our Ecosystem</span>
-            </h1>
-          </div>
-          <div className="importance Area2 ">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis
-            consequuntur pariatur omnis possimus ullam. Saepe aliquid dolores,
-            quia praesentium aspernatur odit nisi adipisci necessitatibus
-            incidunt harum explicabo veniam facere dolor nemo suscipit ipsa
-            ratione voluptas a tempora quos cupiditate? Natus quaerat tempora
-            iure, magni ipsum mollitia suscipit modi tempore nihil. 
-          </div>
-          <div className="importance Area3">
-            <img src={image16} alt="" srcset="" />
-          </div>
-          <div className="importance Area4">
-            <img src={image17} alt="" srcset="" />
-          </div>
-          <div className="importance Area5">
-            <img src={image14} alt="" srcset="" />
-          </div>
-          <div className="importance Area6">
-            <img src={image15} alt="" srcset="" />
-          </div>
-      
+        <div className="importance Area1 ">
+          <h1>
+            importance of Bees in <span>our Ecosystem</span>
+          </h1>
+        </div>
+        <div className="importance Area2 ">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis
+          consequuntur pariatur omnis possimus ullam. Saepe aliquid dolores,
+          quia praesentium aspernatur odit nisi adipisci necessitatibus incidunt
+          harum explicabo veniam facere dolor nemo suscipit ipsa ratione
+          voluptas a tempora quos cupiditate? Natus quaerat tempora iure, magni
+          ipsum mollitia suscipit modi tempore nihil.
+        </div>
+        <div className="importance Area3">
+          <img src={image16} alt="image" />
+        </div>
+        <div className="importance Area4">
+          <img src={image17} alt="image" />
+        </div>
+        <div className="importance Area5">
+          <img src={image14} alt="image" />
+        </div>
+        <div className="importance Area6">
+          <img src={image15} alt="image" />
+        </div>
+      </div>
+      {/* ............Section 6......... */}
+      <div className="product container-md">
+        <h1>
+          Our <span>Products</span>
+        </h1>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem
+          suscipit, pariatur repellat esse ab illum! Consectetur voluptate ea
+          commodi a dolorem ut nulla ex explicabo repudiandae iusto corporis
+          quos quia, deserunt, expedita, neque similique beatae? Accusantium
+          perferendis facere animi labore.
+        </p>
+
+        <div className="row productcomponent">
+          <ProductComponent
+            className="col-md-3"
+            productImg={image18}
+            title={"Natural Honey"}
+            text={
+              "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autemsuscipit, pariatur repellat esse ab illum! Consectetur voluptate eacommodi a dolorem ut nulla ex explicabo repudiandae iusto corporis"
+            }
+            price={"$10"}
+          />
+          <div className="col-md-1"></div>
+          <ProductComponent
+            className="col-md-3"
+            productImg={image19}
+            title={"Bee Pollen"}
+            text={
+              "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autemsuscipit, pariatur repellat esse ab illum! Consectetur voluptate eacommodi a dolorem ut nulla ex explicabo repudiandae iusto corporis"
+            }
+            price={"$20"}
+          />
+          <div className="col-md-1"></div>
+          <ProductComponent
+            className="col-md-3"
+            productImg={image20}
+            title={"Bee Propolis"}
+            text={
+              "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autemsuscipit, pariatur repellat esse ab illum! Consectetur voluptate eacommodi a dolorem ut nulla ex explicabo repudiandae iusto corporis"
+            }
+            price={"$30"}
+          />
+        </div>
       </div>
     </div>
   );

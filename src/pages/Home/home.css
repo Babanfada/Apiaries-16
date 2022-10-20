@@ -262,6 +262,30 @@
   object-fit: cover;
   height: 100%;
 }
+/* ....Section 6...... */
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10vh;
+}
+.product h1 {
+  text-transform: capitalize;
+  font-family: var(--ff-tertiary);
+}
+.product h1 span {
+  color: var(--global-color-primary);
+  font-family: var(--ff-tertiary);
+}
+.product p {
+  font-family: var(--ff-primary);
+  color: var(--global-color-secondary);
+}
+.productcomponent {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
 
 /* .....Media Query...... */
 @media (max-width: 576px) {
