@@ -26,6 +26,8 @@ import "../../../node_modules/bootstrap/dist/css/bootstrap.css";
 import "./home.css";
 import Cards from "../Cards/Cards";
 import ProductComponent from "../../ProductComponent/ProductComponent";
+import Testimonial from "../../Testimonial/Testimonial";
+import Customer from "../../Customer/Customer";
 
 const Home = () => {
   return (
@@ -165,7 +167,7 @@ const Home = () => {
           </div>
           <div className="col-md-1">hidden</div>
           <div className="join-img col-md-6">
-            <img src={image13} alt="image" />
+            <img src={image13} alt="potrait" />
           </div>
         </div>
       </div>
@@ -185,16 +187,16 @@ const Home = () => {
           ipsum mollitia suscipit modi tempore nihil.
         </div>
         <div className="importance Area3">
-          <img src={image16} alt="image" />
+          <img src={image16} alt="potrait" />
         </div>
         <div className="importance Area4">
-          <img src={image17} alt="image" />
+          <img src={image17} alt="potrait" />
         </div>
         <div className="importance Area5">
-          <img src={image14} alt="image" />
+          <img src={image14} alt="potrait" />
         </div>
         <div className="importance Area6">
-          <img src={image15} alt="image" />
+          <img src={image15} alt="potrait" />
         </div>
       </div>
       {/* ............Section 6......... */}
@@ -242,6 +244,23 @@ const Home = () => {
           />
         </div>
       </div>
+      {/* ......Section 7...... */}
+
+      <div className="section7 container-md">
+        <div className="testimage">
+          <img src={image16} alt="potrait" />
+        </div>
+        <div className="client">
+          <p>Testimonial</p>
+          <h1>Client Testimonial</h1>
+          <Customer
+            mystyle={{ margin:"5vh 0" }}
+            picture={[image11, image12, image13, image15, image16]}
+          />
+        </div>
+      </div>
+      {/* ....Section 8...... */}
+      <Testimonial content={[image11, image12, image13, image15, image16]} />
     </div>
   );
 };
