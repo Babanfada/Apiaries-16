@@ -253,10 +253,7 @@ const Home = () => {
         <div className="client">
           <p>Testimonial</p>
           <h1>Client Testimonial</h1>
-          <Customer
-            mystyle={{ margin:"5vh 0" }}
-            picture={[image11, image12, image13, image15, image16]}
-          />
+          <Customer picture={[image11, image12, image13, image15, image16]} />
         </div>
       </div>
       {/* ....Section 8...... */}

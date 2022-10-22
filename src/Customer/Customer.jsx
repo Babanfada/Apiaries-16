@@ -42,7 +42,7 @@ const clientdetails = [
     clientOccupation: "Student"
   }
 ];
-const Customer = ({ picture, mystyle }) => {
+const Customer = ({ picture}) => {
   return (
     <Swiper
       effect={"cube"}
@@ -61,7 +61,7 @@ const Customer = ({ picture, mystyle }) => {
       }}
       modules={[EffectCube, Pagination, Autoplay]}
       className="mySwiper"
-      style={mystyle}
+      
     >
       {picture.map((item, index) => (
         <SwiperSlide>

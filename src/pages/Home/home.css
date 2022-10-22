@@ -267,8 +267,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 5vh ;
-  margin-bottom: 5vh ;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
 }
 .product h1 {
   text-transform: capitalize;
@@ -288,39 +288,54 @@
   width: 100%;
 }
 /* ......Section 7...... */
-.section7{
-  border: 1px solid red;
+.section7 {
+  /* border: 1px solid red; */
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 5vh;
-
 }
-.testimage{
+.testimage {
   width: 35vw;
-  clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+  clip-path: polygon(
+    0% 15%,
+    15% 15%,
+    15% 0%,
+    85% 0%,
+    85% 15%,
+    100% 15%,
+    100% 85%,
+    85% 85%,
+    85% 100%,
+    15% 100%,
+    15% 85%,
+    0% 85%
+  );
 }
-.testimage img{
+.testimage img {
   object-fit: cover;
 }
-.client{
-  border: 1px solid black;
+.client {
+  /* border: 5px solid black; */
   display: flex;
   flex-direction: column;
-  padding: 10px;
   padding-top: 5vh;
+  /* gap: 0vw; */
+  
+  
 }
-.client p{
+.client p {
   color: var(--global-color-primary);
-  font-family: var(--ff-tertiary);
+  font-family: var(--ff-accent);
   font-weight: bolder;
   font-size: larger;
+  /* border: 1px solid red; */
 }
 .client h1 {
-  
-
   font-family: var(--ff-accent);
-  color: var(--global-color-secondary);
+  color: var(--global-color-accent-2);
+  /* border: 1px solid red; */
+  font-weight: bold;
 }
 
 /* .....Media Query...... */
@@ -335,13 +350,18 @@
     display: flex;
     flex-direction: column;
   }
-  .Area5, .Area4{
+  .Area5,
+  .Area4 {
     display: none;
   }
 }
 
-@media(max-width:992px){
+@media (max-width: 992px) {
   .testimage {
-  display: none;
-}
+    display: none;
+  }
+  .section7{
+    justify-content: center;
+  }
+  
 }
