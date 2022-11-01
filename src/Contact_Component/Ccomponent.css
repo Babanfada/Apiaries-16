@@ -1,0 +1,28 @@
+.officeContainer{
+    display: flex;
+    align-items: center;
+    gap: 1.5vw;
+    border: 1px solid grey;
+    padding: 10px;
+    border-radius: 10px;
+    color: var(--global-color-0056b7b);
+    
+}
+.officeContainer:hover{
+   border: 1.5px solid var(--global-color-yellow);
+   transform: translateY(-5px);
+   transition: .8s;
+}
+.office{
+   /* border:  1px solid grey; */
+   padding: 8px;
+   border-radius: 5px;
+   background-color: var(--global-color-yellow);
+   /* color: white; */
+}
+.address h2{
+  font-family: var(--ff-primary);
+}
+.address p{
+   font-family: var(--ff-tertiary);
+}

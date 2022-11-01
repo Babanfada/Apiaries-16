@@ -1,0 +1,57 @@
+.containerp {
+  display: flex;
+  margin-top: 5vh;
+}
+/* .contact {
+} */
+.comp {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vw;
+}
+/* .send {
+  
+} */
+.contact p:nth-child(1) {
+  color: var(--global-color-primary);
+  font-family: var(--ff-tertiary);
+}
+.contact h1 + p {
+  color: var(--global-color-black);
+  font-family: var(--ff-tertiary);
+}
+
+.contact h1 {
+  font-family: var(--ff-tertiary);
+  font-weight: bolder;
+}
+
+.send {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  gap: 1vw;
+}
+.send h2 {
+  font-family: var(--ff-tertiary);
+  font-weight: bold;
+}
+.send input {
+  height: 7vh;
+  border-radius: 5px;
+  border: none;
+  padding-left: 10px;
+}
+textarea {
+  border-radius: 5px;
+  border: none;
+  padding-left: 10px;
+  resize: none;
+}
+.btnsend{
+    display: grid;
+    place-items: center;
+    position: relative;
+    left: 50%;
+   transform: translateX(-50%);
+}

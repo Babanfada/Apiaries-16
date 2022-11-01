@@ -64,7 +64,7 @@ const Customer = ({ picture}) => {
       
     >
       {picture.map((item, index) => (
-        <SwiperSlide>
+        <SwiperSlide key={index}>
           <div className="test">
             <span>{clientdetails[index].clientText}</span>
             <div className="detail">
