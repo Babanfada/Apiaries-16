@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCards, Autoplay } from "swiper";
+import Aos from "aos";
 
 // Import Swiper styles
 import "swiper/swiper.min.css"; //this is very important
@@ -20,7 +21,7 @@ const swipStyle = {
 
 const Testimonial = ({ content }) => {
   return (
-    <div style={swipStyle}>
+    <div data-aos="fade-in" style={swipStyle}>
       <Swiper
         effect={"cards"}
         modules={[EffectCards, Autoplay]}
@@ -34,7 +35,7 @@ const Testimonial = ({ content }) => {
       >
         {content.map((item, index) => (
           <SwiperSlide key={index}>
-            <img src={content[index]} alt={"pics"} />
+            <img src={item} alt={"pics"} />
           </SwiperSlide>
         ))}
       </Swiper>

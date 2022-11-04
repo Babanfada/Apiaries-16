@@ -8,7 +8,7 @@ const ProductComponent = ({ productImg, title, text, price }) => {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    gap:"2vh"
+    gap: "2vh"
   };
   return (
     <Card

@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import { Button } from "react-bootstrap";
+import AOS from "aos";
 import Ccomponent from "../../Contact_Component/Ccomponent";
 import "./contact.css";
 import { ImOffice } from "react-icons/im";
@@ -26,6 +27,9 @@ import { useForm } from "react-hook-form";
 //   })
 //   .required();
 const Contact = () => {
+  useEffect(() => {
+    AOS.init({ duration: 2000, once: true });
+  }, []);
   const mystyle = { fontSize: "50px", color: "white" };
   const mystyle2 = { color: "red" };
   const myArr = [
@@ -64,7 +68,7 @@ const Contact = () => {
   //console.log(watch("example")); // watch input value by passing the name of it
 
   return (
-    <div className="container-sm ">
+    <div data-aos="zoom-in" className="container-sm ">
       <div className="row containerp">
         <div className="contact col-sm-6">
           <p>Welcome to Apiaries 16</p>

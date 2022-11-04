@@ -25,12 +25,13 @@ function Cards(prop) {
   return (
     <Card
       style={{
-        width: "20rem",
+        width: "18rem",
         borderRadius: "15px",
         padding: "0",
         position: "relative",
         borderColor: "transparent",
-        marginTop: "3vh"
+        marginTop: "3vh",
+        // border:"1px solid red"
       }}
     >
       <Card.Img variant="top" src={prop.img} alt=""></Card.Img>
@@ -38,7 +39,7 @@ function Cards(prop) {
         <Card.Img
           variant="top"
           src={prop.img2}
-          alt=""
+          alt="card"
           style={mystyle2}
         ></Card.Img>
       </div>

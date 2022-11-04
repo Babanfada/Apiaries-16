@@ -1,5 +1,6 @@
 import "../node_modules/bootstrap/dist/css/bootstrap.css"
 import "./index.css";
+import "aos/dist/aos.css";
 import React from "react";
 import About from "./pages/About/About";
 import Community from "./pages/Community/Community";

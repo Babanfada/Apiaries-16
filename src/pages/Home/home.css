@@ -6,6 +6,7 @@
 }
 .rowContainer {
   padding: 2vh 5vw;
+  /* border: 1px solid red; */
 }
 
 .fresh {
@@ -45,6 +46,7 @@
 }
 .pic {
   position: relative;
+  /* border: 1px solid red; */
 }
 .small-image-6 {
   position: absolute;
@@ -86,13 +88,13 @@
 .second {
   /* border: 1px solid red; */
   /* padding-top: 10vh; */
-  margin-top: 15vh;
+  margin-top: 3vh;
   /* display: flex;
   justify-content: center; */
   /* gap: 2vw; */
 }
 .honey {
-  /* padding: 3vw; */
+  padding-top: 3vw;
   /* border: 1px solid red; */
   padding-left: 4vw;
   display: flex;
@@ -164,13 +166,23 @@
   font-family: var(--ff-tertiary);
   white-space: nowrap;
 }
-
+.mar{
+  margin-left: 0;
+}
+.data{
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+}
+.wid{
+  width: 100%;
+}
 .cards {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   /* border: 1px solid red; */
-  gap: 6vw;
-  width: 90%;
+  /* gap: 1vw; */
+  width: 80vw;
 }
 
 /* ...section 4....... */
@@ -321,8 +333,6 @@
   flex-direction: column;
   padding-top: 5vh;
   /* gap: 0vw; */
-  
-  
 }
 .client p {
   color: var(--global-color-primary);
@@ -360,8 +370,7 @@
   .testimage {
     display: none;
   }
-  .section7{
+  .section7 {
     justify-content: center;
   }
-  
 }
