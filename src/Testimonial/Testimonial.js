@@ -1,8 +1,8 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCards, Autoplay } from "swiper";
-import Aos from "aos";
+//import Aos from "aos";
 
 // Import Swiper styles
 import "swiper/swiper.min.css"; //this is very important

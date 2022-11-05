@@ -55,7 +55,6 @@ const Contact = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
     reset
   } = useForm();
@@ -79,7 +78,16 @@ const Contact = () => {
             praesentium architecto doloremque?
           </p>
           <div className="comp">
-            <Ccomponent
+            {myArr.map((item, index) => {
+              return (
+                <Ccomponent
+                  title={item.title}
+                  text={item.text}
+                  icon={item.icons}
+                />
+              );
+            })}
+            {/* <Ccomponent
               title={myArr[0].title}
               text={myArr[0].text}
               icon={myArr[0].icons}
@@ -93,7 +101,7 @@ const Contact = () => {
               title={myArr[2].title}
               text={myArr[2].text}
               icon={myArr[2].icons}
-            />
+            /> */}
           </div>
         </div>
         <div className="col-sm-1"></div>

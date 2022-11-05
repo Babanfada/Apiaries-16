@@ -68,7 +68,7 @@ const Customer = ({ picture}) => {
           <div className="test">
             <span>{clientdetails[index].clientText}</span>
             <div className="detail">
-              <img src={picture[index]} />
+              <img src={picture[index]} alt="draft" />
               <div className="finer_detail">
                 <h2>{clientdetails[index].clientName}</h2>
                 <small>{clientdetails[index].clientOccupation}</small>
