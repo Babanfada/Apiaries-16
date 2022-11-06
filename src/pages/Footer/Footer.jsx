@@ -69,13 +69,13 @@ const Footer = () => {
         <div className="col-md-2 col-sm">
           <h4>More Links</h4>
           <ul>
-            <Link className="footer__nav" to="/Contact">
+            {/* <Link className="footer__nav" to="/Contact">
               <li>Team</li>
             </Link>
             <Link className="footer__nav" to="/Contact">
               <li>Community</li>
-            </Link>
-            <Link className="footer__nav" to="/Contact">
+            </Link> */}
+            <Link className="footer__nav" to="/Gallery">
               <li>Gallery</li>
             </Link>
             <Link className="footer__nav" to="/Contact">

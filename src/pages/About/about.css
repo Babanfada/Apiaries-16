@@ -1,0 +1,90 @@
+.aboutContainer {
+  /* border: 1px solid red; */
+  margin-top: 5vh;
+}
+.row img {
+  border-radius: 20px;
+}
+.row h1 {
+  font-family: var(--ff-tertiary);
+  /* white-space: nowrap; */
+}
+.row h1 span {
+  color: var(--global-color-primary);
+  font-family: var(--ff-tertiary);
+}
+.owner {
+  margin-top: 15vh;
+}
+.emily {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1vw;
+}
+.emily h1 {
+  font-weight: bolder;
+  font-family: var(--ff-tertiary);
+}
+.emily span {
+  color: var(--global-color-accent-2);
+  font-family: var(--ff-tertiary);
+  font-size: large;
+}
+.emily p {
+  font-family: var(--ff-tertiary);
+  font-size: large;
+}
+.blank {
+  display: flex;
+  gap: 0.5vw;
+  margin-top: 10px;
+}
+.blank1 {
+  width: 300px;
+  clip-path: polygon(
+    50% 0%,
+    90% 20%,
+    100% 60%,
+    75% 100%,
+    25% 100%,
+    0% 60%,
+    10% 20%
+  );
+  /* border: 1px solid red; */
+  align-self: center;
+}
+.star {
+  /* border: 1px solid red; */
+  /* text-align: end; */
+  display: flex;
+}
+
+/* section 3 */
+.KeepersContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5vh 0;
+  /* border: 1px solid red; */
+}
+.KeepersContainer h1 {
+  font-family: var(--ff-tertiary);
+  padding: 5vh;
+}
+.KeepersContainer h1 span {
+  color: var(--global-color-primary);
+}
+
+.align {
+  /* display: grid;
+   place-items: center; */
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid black; */
+  /* width: 50vw; */
+  /* text-align: center; */
+  /* padding-left: 10vh; */
+}
+.margin{
+    margin-top: 40px;
+}

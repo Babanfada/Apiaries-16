@@ -40,8 +40,10 @@ const NavBar = () => {
 
           <NavLink activeclassname="acitve" className="navlink" to="/About">
             <li className="position">
-              About Us <RiArrowDropDownFill />
-              <ul>
+              {" "}
+              About Us
+              {/* About Us <RiArrowDropDownFill /> */}
+              {/* <ul>
                 <NavLink style={mystyle} activeclassname="active" to="/Team">
                   <li>Team</li>
                 </NavLink>
@@ -52,7 +54,7 @@ const NavBar = () => {
                 >
                   <li>Community</li>
                 </NavLink>
-              </ul>
+              </ul> */}
             </li>
           </NavLink>
 

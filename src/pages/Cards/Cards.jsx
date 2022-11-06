@@ -34,7 +34,7 @@ function Cards(prop) {
         // border:"1px solid red"
       }}
     >
-      <Card.Img variant="top" src={prop.img} alt=""></Card.Img>
+      <Card.Img variant="top" src={prop.img} alt="draft"></Card.Img>
       <div style={myStyle3}>
         <Card.Img
           variant="top"

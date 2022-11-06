@@ -1,0 +1,23 @@
+.galContainer{
+    /* border: 1px solid red; */
+    width: 70vw;
+    margin: 5vh;
+    display: flex;
+    gap: 2vh;
+    flex-direction: column;
+    align-items: center;
+    padding: 5vh 0 ;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.galContainer h1{
+    font-weight: bolder;
+    font-family: var(--ff-tertiary);
+}
+.galContainer p{
+    color:var( --global-color-0056b7b) ;
+    font-family: var(--ff-tertiary);
+    font-size: large;
+}

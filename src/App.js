@@ -26,7 +26,7 @@ const App = () => {
       <Routes>
         <Route index element={<Home />} exact />
         <Route path="/About" element={<About />} />
-        <Route path="/Community" element={<Community />} />
+        {/* <Route path="/Community" element={<Community />} /> */}
         <Route path="/Contact" element={<Contact />} />
         <Route path="*" element={<Error />} />
         <Route path="/Faqs" element={<Faqs />} />
@@ -34,7 +34,7 @@ const App = () => {
         <Route path="/Product" element={<Product />} />
         <Route path="/Services" element={<Services />} />
         <Route path="/Story" element={<Story />} />
-        <Route path="/Team" element={<Team />} />
+        {/* <Route path="/Team" element={<Team />} /> */}
       </Routes>
       <Footer />
     </Router>
