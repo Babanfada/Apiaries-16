@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Honey from "../../images/my images/apiaries_16.jpg";
 import { Link, NavLink } from "react-router-dom";
 import Button from "react-bootstrap/Button";
@@ -7,8 +7,12 @@ import { CgMenuGridR } from "react-icons/cg";
 import { FaRegWindowClose } from "react-icons/fa";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.css";
 import "./NavBar.css";
+import AOS from "aos";
 
 const NavBar = () => {
+  useEffect(() => {
+    AOS.init({ duration: 2000, once: true });
+  }, []);
   const mystyle = {
     textDecoration: "none"
   };
@@ -26,7 +30,7 @@ const NavBar = () => {
   // };
 
   return (
-    <nav className="navbar container-sm">
+    <nav data-aos="fade-down" className="navbar container-sm">
       <div className="container mycontainer">
         <Link className="navbar-brand" to="/">
           <img className="logo" src={Honey} alt="Logo" />

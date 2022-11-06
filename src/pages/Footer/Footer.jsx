@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import "./Footer.css";
 import { Link } from "react-router-dom";
 // import Honey from "../../images/my images/apiaries_16.jpg";
@@ -8,10 +8,19 @@ import { VscLocation } from "react-icons/vsc";
 import { BsTelephone } from "react-icons/bs";
 import { ImMail3 } from "react-icons/im";
 import { GiBee, GiBeehive } from "react-icons/gi";
+import { FaHeart } from "react-icons/fa";
+import AOS from "aos";
 
 const Footer = () => {
+  useEffect(() => {
+    AOS.init({ duration: 2000, once: true });
+  }, []);
   return (
-    <div className="container-fluid footer__container">
+    <div
+      data-aos="fade-up"
+      // data-aos-anchor-placement="top-center"
+      className="container-fluid footer__container"
+    >
       <div className="row">
         <div className="col-md-5 col-sm div1">
           <Link className="navbar-brand brand" to="/">
@@ -101,7 +110,13 @@ const Footer = () => {
       </div>
 
       <div className="sub__footer row">
-        <p className="col-sm">Made with Love By Ibrahim Muhammed Kabeer</p>
+        <p className="col-sm">
+          Made with{" "}
+          <span>
+            <FaHeart className="bor" />
+          </span>{" "}
+          by Tolani
+        </p>
         <p className="col-sm">Copyright © 2020. All rights reserved.</p>
       </div>
     </div>
