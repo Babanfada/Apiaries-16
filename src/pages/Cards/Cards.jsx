@@ -2,7 +2,8 @@ import React from "react";
 //import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
-function Cards(prop) {
+function Cards({ content }) {
+  const { name, text, img, img2 } = content;
   const myStyle = {
     color: "#fc9100",
     margin: "3vh 0",
@@ -30,23 +31,23 @@ function Cards(prop) {
         padding: "0",
         position: "relative",
         borderColor: "transparent",
-        marginTop: "3vh",
+        marginTop: "3vh"
         // border:"1px solid red"
       }}
     >
-      <Card.Img variant="top" src={prop.img} alt="draft"></Card.Img>
+      <Card.Img variant="top" src={img} alt="draft"></Card.Img>
       <div style={myStyle3}>
         <Card.Img
           variant="top"
-          src={prop.img2}
+          src={img2}
           alt="card"
           style={mystyle2}
         ></Card.Img>
       </div>
       <Card.Body>
-        <Card.Title style={myStyle}>{prop.name}</Card.Title>
+        <Card.Title style={myStyle}>{name}</Card.Title>
         <Card.Text style={{ fontFamily: `Rubik, Sans-serif` }}>
-          {prop.text}
+          {text}
         </Card.Text>
         {/* <Button variant="primary">Go somewhere</Button> */}
       </Card.Body>

@@ -1,15 +1,15 @@
 import React, { useEffect } from "react";
 import "./about.css";
 import { Button } from "react-bootstrap";
-import Gal from "../../ReusedComponent/Gal";
+//import Gal from "../../ReusedComponent/Gal";
 import AOS from "aos";
 import image12 from "../../images/young.jpg";
-import { FaFacebookF, FaTwitter } from "react-icons/fa";
-import { SiInstagram, SiYoutube } from "react-icons/si";
+import { FaTwitter } from "react-icons/fa";
+import { SiYoutube } from "react-icons/si";
 import image14 from "../../images/bee1.jpg";
 import image15 from "../../images/bee2.jpg";
 import image16 from "../../images/bee3.jpg";
-import image17 from "../../images/bee4.jpg";
+//import image17 from "../../images/bee4.jpg";
 import image13 from "../../images/working-bees.jpg";
 import Keeepers from "../../ReusedComponent/Keeepers";
 import logo1 from "../../images/logo1.png";
@@ -21,12 +21,12 @@ import logo6 from "../../images/logo6.png";
 import logo5 from "../../images/logo5.png";
 
 const About = () => {
-  const content = {
-    h1: "About Us",
-    p:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, dolorunatus accusamus facere nam consequatur odit quae sequi dignissimonihil.Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, dolorunatus accusamus facere nam consequatur odit quae sequi dignissimonihil.",
-    buttonText: "Learn More"
-  };
+  // const content = {
+  //   h1: "About Us",
+  //   p:
+  //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, dolorunatus accusamus facere nam consequatur odit quae sequi dignissimonihil.Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, dolorunatus accusamus facere nam consequatur odit quae sequi dignissimonihil.",
+  //   buttonText: "Learn More"
+  // };
   const keepersContent = [
     {
       image: image12,
@@ -92,7 +92,7 @@ const About = () => {
       dataAos: "fade-down-left"
     }
   ];
-  const animate = [];
+  // const animate = [];
   useEffect(() => {
     AOS.init({ duration: 2000, once: true });
   }, []);
@@ -101,7 +101,7 @@ const About = () => {
       <div className="container-sm ">
         <div className="row">
           <div data-aos="flip-left" className="col-sm">
-            <img src={image12} />
+            <img src={image12} alt={"draft"} />
           </div>
 
           {/* <div className="col-sm-1"></div> */}
@@ -190,6 +190,7 @@ const About = () => {
             data-aos="fade-down-left"
             src={image16}
             className="col-sm"
+            alt={"draft"}
           />
         </div>
       </div>
@@ -201,6 +202,7 @@ const About = () => {
             data-aos="fade-down-left"
             src={image15}
             className="col-sm"
+            alt={"draft"}
           />
           <div className="col-sm-1"></div>
           <div

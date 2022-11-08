@@ -1,6 +1,7 @@
-import React, { useEffect, useState, useRef } from "react";
-import image13 from "../../images/working-bees.jpg";
+import React, { useEffect, useState } from "react";
+//import image13 from "../../images/working-bees.jpg";
 import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom"; 
 import AOS from "aos";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css"; //this is very important
@@ -94,14 +95,16 @@ const Gallery = () => {
                   id="input"
                   placeholder="Email Address....."
                 />
-                <Button
-                  data-aos="fade-down"
-                  data-aos-delay="1000"
-                  className="button"
-                  variant={"warning"}
-                >
-                  Subscribe
-                </Button>
+                <Link to="/Gallery">
+                  <Button
+                    data-aos="fade-down"
+                    data-aos-delay="1000"
+                    className="button"
+                    variant={"warning"}
+                  >
+                    Subscribe
+                  </Button>
+                </Link>
               </div>
             </div>
             <div className="col-md-1">hidden</div>
@@ -123,14 +126,13 @@ const Gallery = () => {
                   clickable: true
                 }}
                 Mousewheel={true}
-                navigation={true}
+                navigation={false}
                 modules={[Autoplay, Mousewheel, Navigation]}
                 className={styles.mySwiper}
               >
                 {dataa.map((item, index) => {
                   return (
                     <SwiperSlide className={styles.swiperslide} key={item.id}>
-                      {" "}
                       <img src={item.url} alt={"draft"} />
                     </SwiperSlide>
                   );

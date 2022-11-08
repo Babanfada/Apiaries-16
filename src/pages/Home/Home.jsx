@@ -18,7 +18,6 @@ import image17 from "../../images/bee4.jpg";
 import image18 from "../../images/Honey-removebg-preview.png";
 import image19 from "../../images/propolis-bee-removebg-preview.png";
 import image20 from "../../images/bee-pollen-in-a-pot-removebg-preview.png";
-
 import image5 from "../../images/image_2.jpg";
 import image3 from "../../images/image_3.jpg";
 import image4 from "../../images/image_4.jpg";
@@ -29,11 +28,89 @@ import Cards from "../Cards/Cards";
 import ProductComponent from "../../ProductComponent/ProductComponent";
 import Testimonial from "../../Testimonial/Testimonial";
 import Customer from "../../Customer/Customer";
+import Carousel from "../../ReusedComponent/Carousel";
 
 const Home = () => {
   useEffect(() => {
     AOS.init({ duration: 2000, once: true });
   }, []);
+
+  const contents = [
+    {
+      name: "Natural Honey",
+      text: (
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum sequi
+          atque quos cum aperiam excepturi?
+        </p>
+      ),
+      img: image10,
+      img2: image9,
+      dataAos: "fade-right",
+      dataAosdelay: "1000",
+      className: "col-md-4 data"
+    },
+    {
+      name: "Expert Beekeepers",
+      text: (
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum sequi
+          atque quos cum aperiam excepturi?
+        </p>
+      ),
+      img: image11,
+      img2: image8,
+      dataAos: "fade-up",
+      dataAosdelay: "2000",
+      className: "col-md-4 data"
+    },
+    {
+      name: "Organized Apiary",
+      text: (
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum sequi
+          atque quos cum aperiam excepturi?
+        </p>
+      ),
+      img: image12,
+      img2: image6,
+      dataAos: "fade-left",
+      dataAosdelay: "3000",
+      className: "col-md-4 data"
+    }
+  ];
+  const products = [
+    {
+      productImg: image18,
+      title: "Natural Honey",
+      text:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autemsuscipit, pariatur repellat esse ab illum! Consectetur voluptate eacommodi a dolorem ut nulla ex explicabo repudiandae iusto corporis",
+      price: "$10",
+      className: "col-md-3 data",
+      dataAos: "slide-up",
+      dataAosdelay: "1000"
+    },
+    {
+      productImg: image19,
+      title: "Bee Pollen",
+      text:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autemsuscipit, pariatur repellat esse ab illum! Consectetur voluptate eacommodi a dolorem ut nulla ex explicabo repudiandae iusto corporis",
+      price: "$20",
+      className: "col-md-3 data",
+      dataAos: "zoom-out",
+      dataAosdelay: "2000"
+    },
+    {
+      productImg: image20,
+      title: "Bee Propolis",
+      text:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autemsuscipit, pariatur repellat esse ab illum! Consectetur voluptate eacommodi a dolorem ut nulla ex explicabo repudiandae iusto corporis",
+      price: "$30",
+      className: "col-md-3 data",
+      dataAos: "zoom-in",
+      dataAosdelay: "3000"
+    }
+  ];
   return (
     <div className="home container-fluid">
       {/* .......section 1.......... */}
@@ -49,10 +126,9 @@ const Home = () => {
             est atque obcaecati nihil quasi nulla?
           </p>
           <Link to="/Gallery">
-            {" "}
             <Button variant="warning" className="button">
               View More
-            </Button>{" "}
+            </Button>
           </Link>
         </div>
 
@@ -127,57 +203,18 @@ const Home = () => {
         </h1>
         <div className=" mar">
           <div className="row cards">
-            <div
-              data-aos="fade-right"
-              data-aos-delay="1000"
-              className="col-md-4 data"
-            >
-              <Cards
-              
-                name={"Natural Honey"}
-                text={
-                  <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Earum sequi atque quos cum aperiam excepturi?
-                  </p>
-                }
-                img={image10}
-                img2={image9}
-                className="wid"
-              />
-            </div>
-
-            <div data-aos="fade-up" data-aos-delay="2000" className="col-md-4 data">
-              <Cards
-                name={"Expert Beekeepers"}
-                text={
-                  <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Earum sequi atque quos cum aperiam excepturi?
-                  </p>
-                }
-                img={image11}
-                img2={image8}
-              />
-            </div>
-
-            <div
-              data-aos="fade-left"
-              data-aos-delay="3000"
-              className="col-md-4 data"
-            >
-              <Cards
-                name={"Organized Apiary"}
-                text={
-                  <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Earum sequi atque quos cum aperiam excepturi?
-                  </p>
-                }
-                img={image12}
-                img2={image6}
-              />
-            </div>
+            {contents.map((content, index) => {
+              return (
+                <div
+                  data-aos={content.dataAos}
+                  data-aos-delay={content.dataAosdelay}
+                  className={content.className}
+                  key={index}
+                >
+                  <Cards content={content} />
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
@@ -301,38 +338,18 @@ const Home = () => {
           data-aos-delay="1000"
           className="row productcomponent"
         >
-          <div className="col-md-3 data" data-aos="slide-up" data-aos-delay="1000">
-            <ProductComponent
-              productImg={image18}
-              title={"Natural Honey"}
-              text={
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autemsuscipit, pariatur repellat esse ab illum! Consectetur voluptate eacommodi a dolorem ut nulla ex explicabo repudiandae iusto corporis"
-              }
-              price={"$10"}
-            />
-          </div>
-          <div className="col-md-1 data"></div>
-          <div className="col-md-3 data" data-aos="zoom-out" data-aos-delay="2000">
-            <ProductComponent
-              productImg={image19}
-              title={"Bee Pollen"}
-              text={
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autemsuscipit, pariatur repellat esse ab illum! Consectetur voluptate eacommodi a dolorem ut nulla ex explicabo repudiandae iusto corporis"
-              }
-              price={"$20"}
-            />
-          </div>
-          <div className="col-md-1 data"></div>
-          <div className="col-md-3 data" data-aos="zoom-in" data-aos-delay="3000">
-            <ProductComponent
-              productImg={image20}
-              title={"Bee Propolis"}
-              text={
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autemsuscipit, pariatur repellat esse ab illum! Consectetur voluptate eacommodi a dolorem ut nulla ex explicabo repudiandae iusto corporis"
-              }
-              price={"$30"}
-            />
-          </div>
+          {products.map((product, index) => {
+            return (
+              <div
+                className={product.className}
+                data-aos={product.dataAos}
+                data-aos-delay={product.dataAosdelay}
+                key={index}
+              >
+                <ProductComponent product={product} />
+              </div>
+            );
+          })}
         </div>
       </div>
       {/* ......Section 7...... */}
@@ -358,6 +375,7 @@ const Home = () => {
           content={[image11, image12, image13, image15, image16]}
         />
       </div>
+      {/* <Carousel /> */}
     </div>
   );
 };

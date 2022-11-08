@@ -3,7 +3,8 @@ import "./ProductComponent.css";
 import { Button } from "react-bootstrap";
 import { Card } from "react-bootstrap";
 
-const ProductComponent = ({ productImg, title, text, price }) => {
+const ProductComponent = ({ product }) => {
+  const { productImg, title, text, price } = product;
   const pstyle = {
     display: "flex",
     flexDirection: "column",
