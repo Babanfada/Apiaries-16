@@ -22,9 +22,22 @@ import image19 from "../../images/propolis-bee-removebg-preview.png";
 import image202 from "../../images/bee-pollen-in-a-pot-removebg-preview.png";
 import image_1 from "../../images/image_1.png";
 import Ambrossia from "../../images/Ambrossia.png";
-import Carousel from "../../ReusedComponent/Carousel"
+import Carousel from "../../ReusedComponent/Carousel";
 import "./product.css";
+//const url0 = "https://fakerapi.it/api/v1/users?_quantity=10&_gender=male";
 const Product = () => {
+  // const [data0, setdata0] = useState([]);
+  // const fetchData = () => {
+  //   fetch(url0)
+  //     .then(response => response.json())
+  //     .then(json => {
+  //       console.log(json);
+  //       setdata0(json.data);
+  //     });
+  // };
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
   const contents = [
     {
       name: "Natural Honey",
@@ -272,7 +285,9 @@ const Product = () => {
         </div>
       </div>
       {/* section 4 */}
-      <Carousel />
+      <div data-aos="fade-in">
+        <Carousel />
+      </div>
     </>
   );
 };

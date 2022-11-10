@@ -1,12 +1,14 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import women from "../images/women.jpg";
+//import women from "../images/women.jpg";
 import { IoIosPerson } from "react-icons/io";
 import { MdOutlineReadMore } from "react-icons/md";
 import { AiFillClockCircle, AiOutlineComment } from "react-icons/ai";
 
-const Stories = () => {
+const Stories = ({ stuffs }) => {
+  const [item, data1, data2] = stuffs;
+
   const style1 = {
     // border: ".3px solid transparent",
     width: "20rem",
@@ -51,36 +53,32 @@ const Stories = () => {
         flexDirection: "column",
         alignItems: "center",
         borderRadius: "10px",
-        border:"none"
+        border: "none"
       }}
     >
       <Card.Img
         style={{
           width: "100%",
-        //   border: "2px solid red",
+          //   border: "2px solid red",
           margin: "0",
           borderRadius: "10px 10px 0 0"
         }}
         variant="top"
-        src={women}
+        src={item.image}
       />
       <Card.Body style={style1}>
-        <Card.Title style={style2}>Bees, the wonder of Nature</Card.Title>
+        <Card.Title style={style2}>{item.title}</Card.Title>
         <small style={style3}>
           <IoIosPerson />
-          <a style={{ textDecoration: "none" }} href="">
-            Babanfada.
+          <a style={{ textDecoration: "none", whiteSpace: "nowrap" }} href="">
+            {item.author}
           </a>
           <AiFillClockCircle />
-          <span>July 17, 2020.</span>
+          <span style={{ whiteSpace: "nowrap" }}>{item.published}</span>
           <AiOutlineComment />
-          <span>No Comment</span>
+          <span style={{ whiteSpace: "nowrap" }}>{item.genre}</span>
         </small>
-        <Card.Text style={style4}>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.Some quick example text to build on the
-          card title and make up the bulk of the card's content.
-        </Card.Text>
+        <Card.Text style={style4}>{item.description}</Card.Text>
         <Button style={style5} variant="outline-light">
           <span
             style={{

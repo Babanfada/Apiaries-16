@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import AOS from "aos";
 import { Button } from "react-bootstrap";
 import image from "../../images/image_1.png";
@@ -29,12 +29,24 @@ import ProductComponent from "../../ProductComponent/ProductComponent";
 import Testimonial from "../../Testimonial/Testimonial";
 import Customer from "../../Customer/Customer";
 import Carousel from "../../ReusedComponent/Carousel";
+const url0 = "https://api.thecatapi.com/v1/images/search?limit=4";
 
 const Home = () => {
-  useEffect(() => {
-    AOS.init({ duration: 2000, once: true });
-  }, []);
-
+  // useEffect(() => {
+  //   AOS.init({ duration: 2000, once: true });
+  // }, []);
+  // const [data0, setdata0] = useState([]);
+  // const fetchData = () => {
+  //   fetch(url0)
+  //     .then(response => response.json())
+  //     .then(json => {
+  //       console.log(json);
+  //       setdata0(json.data);
+  //     });
+  // };
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
   const contents = [
     {
       name: "Natural Honey",
@@ -375,7 +387,7 @@ const Home = () => {
           content={[image11, image12, image13, image15, image16]}
         />
       </div>
-      {/* <Carousel /> */}
+      <Carousel data-aos="fade-in" />
     </div>
   );
 };

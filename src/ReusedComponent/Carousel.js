@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import axios from "axios";
@@ -15,13 +15,11 @@ import "swiper/swiper.min.css"; //this is very important
 // import "swiper/modules/navigation/navigation.min.css"; //also this
 import "swiper/modules/autoplay/autoplay.min.css"; //also this
 // import required modules
-import { Pagination, Autoplay, Mousewheel, EffectCoverflow } from "swiper";
-const url = "https://api.thecatapi.com/v1/images/search?limit=10";
+import { Pagination, Autoplay, EffectCoverflow, Mousewheel } from "swiper";
+ const url = "https://api.thecatapi.com/v1/images/search?limit=10";
 export default function Carousel() {
   const [dataa, setdataa] = useState([]);
-  useEffect(() => {
-    AOS.init({ duration: 2000, once: true });
-  }, []);
+  
   useEffect(() => {
     axios
       .get(url)
@@ -37,9 +35,11 @@ export default function Carousel() {
       .finally(function() {
         // always executed
       });
-  }, [url]);
-
-  if (dataa.lenght) {
+  }, []);
+useEffect(() => {
+  AOS.init({ duration: 2000, once: true });
+}, []);
+  if (!dataa.length) {
     return (
       <div>
         <Spinner animation="grow" variant="warning" />
@@ -47,7 +47,7 @@ export default function Carousel() {
     );
   } else {
     return (
-      <div data-aos="zoom-in">
+      <div >
         <Swiper
           effect={"coverflow"}
           slidesPerView={5}

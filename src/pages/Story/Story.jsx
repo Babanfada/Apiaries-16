@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+//import axios from "axios";
 import Spinner from "react-bootstrap/Spinner";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
@@ -6,34 +7,62 @@ import pollen from "../../images/Ambrossia.png";
 import "./story.css";
 import Stories from "../../ReusedComponent/Stories";
 import Carousel from "../../ReusedComponent/Carousel";
+const url0 = "https://fakerapi.it/api/v1/books?_quantity=6";
+const url1 =
+  "https://fakerapi.it/api/v1/persons?_quantity=5&_gender=male&_birthday_start=2005-01-01";
+const url2 = "https://fakerapi.it/api/v1/users?_quantity=3&_gender=male";
 const Story = () => {
+  const [data0, setdata0] = useState([]);
+  const [data1, setdata1] = useState([]);
+  const [data2, setdata2] = useState([]);
   const style1 = {
     // border: "1px solid red",
     display: "flex",
     justifyContent: "center",
     gap: "1vw"
   };
-  const url = "";
-  const [data, setdata] = useState([]);
-  useEffect(() => {
-    fetch(url)
+
+  const fetchData = () => {
+    fetch(url0)
       .then(response => response.json())
       .then(json => {
         console.log(json);
-        setdata(json);
-        console.log(data);
+        setdata0(json.data);
       });
-  }, [url]);
+  };
+  const fetchData1 = () => {
+    fetch(url1)
+      .then(response => response.json())
+      .then(json => {
+        console.log(json);
+        setdata1(json.data);
+      });
+  };
+  const fetchData2 = () => {
+    fetch(url2)
+      .then(response => response.json())
+      .then(json => {
+        console.log(json);
+        setdata2(json.data);
+      });
+  };
 
-  if (data.lenght) {
+  useEffect(() => {
+    fetchData();
+    fetchData1();
+    fetchData2();
+  }, []);
+
+  if (!data0.length) {
     return (
-      <div style={{display:"grid", placeContent:"center"}}>
+      <div style={{ display: "grid", placeContent: "center" }}>
         <Spinner animation="border" variant="success" />
       </div>
     );
   } else {
     return (
       <>
+        {/* <p>{data0[0].description}</p> */}
         <div className="container-sm ">
           <div className="row">
             <div data-aos="flip-left" className="col-sm">
@@ -57,17 +86,20 @@ const Story = () => {
             </div>
           </div>
         </div>
-        <div style={{marginTop:"10vh"}} className="container-sm">
+        <div style={{ marginTop: "10vh" }} className="container-sm">
           <div style={style1} className="row">
-            <Stories className="col-sm" />
-            <Stories className="col-sm" />
-            <Stories className="col-sm" />
-            <Stories className="col-sm" />
-            <Stories className="col-sm" />
-            <Stories className="col-sm" />
+            {data0.map((item) => {
+              return (
+                <Stories
+                  stuffs={[item, data1, data2]}
+                  className="col-sm"
+                  key={item.id}
+                />
+              );
+            })}
           </div>
         </div>
-        <Carousel />
+        <Carousel  />
       </>
     );
   }
