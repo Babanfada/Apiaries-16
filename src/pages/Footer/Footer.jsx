@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import "./Footer.css";
 import { Link } from "react-router-dom";
 // import Honey from "../../images/my images/apiaries_16.jpg";
@@ -8,7 +8,7 @@ import { VscLocation } from "react-icons/vsc";
 import { BsTelephone } from "react-icons/bs";
 import { ImMail3 } from "react-icons/im";
 import { GiBee, GiBeehive } from "react-icons/gi";
-import { FaHeart } from "react-icons/fa";
+//import { FaHeart } from "react-icons/fa";
 import AOS from "aos";
 
 const Footer = () => {
@@ -109,15 +109,18 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="sub__footer row">
-        <p className="col-sm">
-          Made with{" "}
-          <span>
-            <FaHeart className="bor" />
-          </span>{" "}
-          by Tolani
-        </p>
-        <p className="col-sm">Copyright © 2020. All rights reserved.</p>
+      <div className="container-sm ">
+        <div
+          style={{
+            color: "white",
+            paddingTop: "3vh",
+            fontFamily: "Great Vibes, cursive"
+          }}
+          className=" row"
+        >
+          <div className="col-sm">Made with love by Tolani</div>
+          <div className="col-sm">Copyright © 2020. All rights reserved.</div>
+        </div>
       </div>
     </div>
   );

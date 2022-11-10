@@ -86,9 +86,13 @@ const Story = () => {
             </div>
           </div>
         </div>
-        <div style={{ marginTop: "10vh" }} className="container-sm">
+        <div
+          data-aos="zoom-out"
+          style={{ marginTop: "10vh" }}
+          className="container-sm"
+        >
           <div style={style1} className="row">
-            {data0.map((item) => {
+            {data0.map(item => {
               return (
                 <Stories
                   stuffs={[item, data1, data2]}
@@ -99,7 +103,7 @@ const Story = () => {
             })}
           </div>
         </div>
-        <Carousel  />
+        <Carousel />
       </>
     );
   }

@@ -10,7 +10,7 @@
   object-fit: cover;
   /* display: grid;
     place-items: center; */
-    margin-top: 8vh;
+  margin-top: 8vh;
 }
 .brand {
   color: white;
@@ -104,10 +104,15 @@
   padding-top: 5vh;
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   color: white;
+  /* gap: 8vw; */
 }
-.sub__footer p {
+.sub__footer div {
   font-family: var(--ff-tertiary);
+
+  width: 10vw;
+  
 }
 
 /* ......media query 777px........ */
