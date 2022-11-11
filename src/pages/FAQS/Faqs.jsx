@@ -15,33 +15,33 @@ const Faqs = () => {
       question: "Are you using dangerous chemical?",
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.Ut et neque eget nunc pellentesque tincidunt et tempor sem. Sed sed mi vel mi auctor placerat. Nulla commodo",
-      pic: bee
-      // style: { display: "flex", flexDirection: "row" }
+      pic: bee,
+      style: { display: "flex", flexDirection: "row", gap: "30vw" }
     },
     {
       question: "What is the difference between wild bees and farm bees?",
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.Ut et neque eget nunc pellentesque tincidunt et tempor sem. Sed sed mi vel mi auctor placerat. Nulla commodo",
-      pic: beek
-      // style: {
-      //   display: "flex",
-      //   flexDirection: "rowReverse",
-      //   border: "6px solid red"
-      // }
+      pic: beek,
+      style: {
+        display: "flex",
+        flexDirection: "rowReverse",
+        border: "6px solid red"
+      }
     },
     {
       question: "How do you extract honey from the bees?",
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.Ut et neque eget nunc pellentesque tincidunt et tempor sem. Sed sed mi vel mi auctor placerat. Nulla commodo",
-      pic: beekeeper
-      // style: { display: "flex", flexDirection: "row" }
+      pic: beekeeper,
+      style: { display: "flex", flexDirection: "row" }
     },
     {
       question: "How dangerous is honey bees to humans and dogs?",
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.Ut et neque eget nunc pellentesque tincidunt et tempor sem. Sed sed mi vel mi auctor placerat. Nulla commodo",
-      pic: clusters
-      // style: { display: "flex", flexDirection: "rowReverse" }
+      pic: clusters,
+      style: { display: "flex", flexDirection: "rowReverse" }
     }
   ];
   return (

@@ -76,7 +76,7 @@ export default function Carousel() {
           {dataa.map((data, index) => {
             return (
               <SwiperSlide className={Caro.SwiperSlide} key={index}>
-                <img src={data.url} alt={"draft"} />
+                <img className={Caro.img} src={data.url} alt={"draft"} />
               </SwiperSlide>
             );
           })}

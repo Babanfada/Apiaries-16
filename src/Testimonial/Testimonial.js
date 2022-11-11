@@ -7,7 +7,7 @@ import { EffectCards, Autoplay } from "swiper";
 // Import Swiper styles
 import "swiper/swiper.min.css"; //this is very important
 import "swiper/modules/effect-cards/effect-cards.min.css"; //also this
-import "./Testimonial.css";
+import Testimonialcss from "./Testimonial.module.css";
 //import "swiper/css/effect-cards";
 
 // Import Swiper styles
@@ -27,15 +27,15 @@ const Testimonial = ({ content }) => {
         modules={[EffectCards, Autoplay]}
         loop={true}
         grabCursor={true}
-        // className="mySwiper"
+        className={Testimonialcss.swiper}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false
         }}
       >
         {content.map((item, index) => (
-          <SwiperSlide key={index}>
-            <img src={item} alt={"pics"} />
+          <SwiperSlide key={index} className={Testimonialcss.SwiperSlide}>
+            <img className={Testimonialcss.img} src={item} alt={"pics"} />
           </SwiperSlide>
         ))}
       </Swiper>

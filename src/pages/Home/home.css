@@ -305,8 +305,9 @@
   /* border: 1px solid red; */
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 5vh;
+  gap: 15vw;
 }
 .testimage {
   width: 35vw;

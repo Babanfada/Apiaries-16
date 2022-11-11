@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css"; //this is very important
 import "swiper/modules/effect-cube/effect-cube.min.css"; //also this
 import "swiper/modules/pagination/pagination.min.css"; //also this
-import "./Customer.css";
+import customerCss from "./Customer.module.css";
 // import required modules
 import { EffectCube, Pagination, Autoplay } from "swiper";
 const clientdetails = [
@@ -60,18 +60,25 @@ const Customer = ({ picture}) => {
         disableOnInteraction: false
       }}
       modules={[EffectCube, Pagination, Autoplay]}
-      className="mySwiper"
-      
+      className={customerCss.myswiper}
     >
       {picture.map((item, index) => (
-        <SwiperSlide key={index}>
-          <div className="test">
+        <SwiperSlide key={index} className={customerCss.slide}>
+          <div className={customerCss.test}>
             <span>{clientdetails[index].clientText}</span>
-            <div className="detail">
-              <img src={picture[index]} alt="draft" />
-              <div className="finer_detail">
-                <h2>{clientdetails[index].clientName}</h2>
-                <small>{clientdetails[index].clientOccupation}</small>
+            <div className={customerCss.detail}>
+              <img
+                className={customerCss.img}
+                src={picture[index]}
+                alt="draft"
+              />
+              <div className={customerCss.finerdetail}>
+                <h2 className={customerCss.finerdetailh2}>
+                  {clientdetails[index].clientName}
+                </h2>
+                <small className={customerCss.finerdetailsmall}>
+                  {clientdetails[index].clientOccupation}
+                </small>
               </div>
             </div>
           </div>

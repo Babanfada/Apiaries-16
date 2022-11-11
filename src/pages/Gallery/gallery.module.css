@@ -1,8 +1,7 @@
 .mySwiper {
   width: 100%;
-  height: 100%;
+  height: 50vh;
   border-radius: 10px;
-  /* border: 1px solid red; */
 }
 
 .swiperslide {
@@ -23,13 +22,11 @@
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
-  
 }
 
-.swiperslide img {
+.img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-
 }

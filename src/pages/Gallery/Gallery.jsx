@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 //import image13 from "../../images/working-bees.jpg";
 import { Button } from "react-bootstrap";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 import AOS from "aos";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css"; //this is very important
@@ -12,7 +12,7 @@ import "swiper/modules/autoplay/autoplay.min.css"; //also this
 //import "swiper/modules/thumbs/thumbs.min.css"; //also this
 
 // import required modules
-import { Navigation, Mousewheel, Autoplay } from "swiper";
+import { Pagination, Autoplay } from "swiper";
 import Spinner from "react-bootstrap/Spinner";
 import styles from "../Gallery/gallery.module.css";
 import axios from "axios";
@@ -122,18 +122,20 @@ const Gallery = () => {
                   delay: 2500,
                   disableOnInteraction: false
                 }}
-                pagination={{
-                  clickable: true
-                }}
-                Mousewheel={true}
-                navigation={false}
-                modules={[Autoplay, Mousewheel, Navigation]}
+                // pagination={{
+                //   clickable: true
+                // }}
+                modules={[Autoplay, Pagination]}
                 className={styles.mySwiper}
               >
                 {dataa.map((item, index) => {
                   return (
                     <SwiperSlide className={styles.swiperslide} key={item.id}>
-                      <img src={item.url} alt={"draft"} />
+                      <img
+                        className={styles.img}
+                        src={item.url}
+                        alt={"draft"}
+                      />
                     </SwiperSlide>
                   );
                 })}

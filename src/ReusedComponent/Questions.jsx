@@ -1,11 +1,11 @@
 import React from "react";
 
 const Questions = ({ detail }) => {
-  const { question, answer, pic, style } = detail;
+  const { question, answer, pic, styles } = detail;
   return (
     <div style={{ marginTop: "5vh" }} className="container-sm">
-      <div className="row">
-        <div className="col-sm-8">
+      <div style={styles} className="row">
+        <div style={{padding:"0 4vw"}} className="col-sm-8">
           <h3
             style={{
               color: "#ffb005",
