@@ -62,7 +62,6 @@ const Story = () => {
   } else {
     return (
       <>
-        {/* <p>{data0[0].description}</p> */}
         <div className="container-sm ">
           <div className="row">
             <div data-aos="flip-left" className="col-sm">

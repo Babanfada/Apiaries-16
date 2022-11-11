@@ -16,10 +16,10 @@ import "swiper/swiper.min.css"; //this is very important
 import "swiper/modules/autoplay/autoplay.min.css"; //also this
 // import required modules
 import { Pagination, Autoplay, EffectCoverflow, Mousewheel } from "swiper";
- const url = "https://api.thecatapi.com/v1/images/search?limit=10";
+const url = "https://api.thecatapi.com/v1/images/search?limit=10";
 export default function Carousel() {
   const [dataa, setdataa] = useState([]);
-  
+
   useEffect(() => {
     axios
       .get(url)
@@ -36,18 +36,18 @@ export default function Carousel() {
         // always executed
       });
   }, []);
-useEffect(() => {
-  AOS.init({ duration: 2000, once: true });
-}, []);
+  useEffect(() => {
+    AOS.init({ duration: 2000, once: true });
+  }, []);
   if (!dataa.length) {
     return (
-      <div>
-        <Spinner animation="grow" variant="warning" />
+      <div style={{ display: "grid", placeItems: "center", marginTop: "5vh" }}>
+        <Spinner animation="border" variant="succes" />
       </div>
     );
   } else {
     return (
-      <div >
+      <div>
         <Swiper
           effect={"coverflow"}
           slidesPerView={5}

@@ -87,7 +87,7 @@ const Footer = () => {
             <Link className="footer__nav" to="/Gallery">
               <li>Gallery</li>
             </Link>
-            <Link className="footer__nav" to="/Contact">
+            <Link className="footer__nav" to="/Faqs">
               <li>Faqs</li>
             </Link>
           </ul>
