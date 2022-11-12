@@ -1,11 +1,15 @@
 import React from "react";
 
 const Questions = ({ detail }) => {
-  const { question, answer, pic, styles } = detail;
+  const { question, answer, pic, design, dataAOS } = detail;
   return (
-    <div style={{ marginTop: "5vh" }} className="container-sm">
-      <div style={styles} className="row">
-        <div style={{padding:"0 4vw"}} className="col-sm-8">
+    <div
+      data-aos={dataAOS}
+      style={{ marginTop: "5vh" }}
+      className="container-sm"
+    >
+      <div style={design} className="row">
+        <div style={{ padding: "0 4vw" }} className="col-sm-8">
           <h3
             style={{
               color: "#ffb005",

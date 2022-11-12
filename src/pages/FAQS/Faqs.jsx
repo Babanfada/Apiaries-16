@@ -1,5 +1,7 @@
 import React from "react";
-import { Button } from "react-bootstrap";
+//import { Button } from "react-bootstrap";
+import Button from "@mui/material/Button";
+
 import keeper from "../../images/apiarist-taking-out-hive-frames.jpg";
 import bee from "../../images/bee3.jpg";
 import beek from "../../images/collecting_honey.jpg";
@@ -16,32 +18,36 @@ const Faqs = () => {
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.Ut et neque eget nunc pellentesque tincidunt et tempor sem. Sed sed mi vel mi auctor placerat. Nulla commodo",
       pic: bee,
-      style: { display: "flex", flexDirection: "row", gap: "30vw" }
+      dataAOS: "fade-right"
     },
     {
       question: "What is the difference between wild bees and farm bees?",
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.Ut et neque eget nunc pellentesque tincidunt et tempor sem. Sed sed mi vel mi auctor placerat. Nulla commodo",
       pic: beek,
-      style: {
+      design: {
         display: "flex",
-        flexDirection: "rowReverse",
-        border: "6px solid red"
-      }
+        flexDirection: "row-reverse"
+      },
+      dataAOS: "fade-left"
     },
     {
       question: "How do you extract honey from the bees?",
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.Ut et neque eget nunc pellentesque tincidunt et tempor sem. Sed sed mi vel mi auctor placerat. Nulla commodo",
       pic: beekeeper,
-      style: { display: "flex", flexDirection: "row" }
+      dataAOS: "fade-right"
     },
     {
       question: "How dangerous is honey bees to humans and dogs?",
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.Ut et neque eget nunc pellentesque tincidunt et tempor sem. Sed sed mi vel mi auctor placerat. Nulla commodo",
       pic: clusters,
-      style: { display: "flex", flexDirection: "rowReverse" }
+      design: {
+        display: "flex",
+        flexDirection: "row-reverse"
+      },
+      dataAOS: "fade-left"
     }
   ];
   return (
@@ -73,6 +79,19 @@ const Faqs = () => {
         {details.map((detail, index) => {
           return <Questions detail={detail} key={index} />;
         })}
+      </div>
+      <div style={{ display: "grid", placeItems: "center", marginTop: "5vh" }}>
+        <Link to="/Contact">
+          <Button
+            style={{ fontFamily: "Lora, serif" }}
+            variant={"contained"}
+            color={"warning"}
+            size={"large"}
+            data-aos={"zoom-out"}
+          >
+            More Questions ?
+          </Button>
+        </Link>
       </div>
       <div>
         <Carousel />
