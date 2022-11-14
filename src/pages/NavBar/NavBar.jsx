@@ -44,7 +44,6 @@ const NavBar = () => {
 
           <NavLink activeclassname="acitve" className="navlink" to="/About">
             <li className="position">
-              {" "}
               About Us
               {/* About Us <RiArrowDropDownFill /> */}
               {/* <ul>

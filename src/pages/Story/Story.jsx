@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useContext } from "react";
 //import axios from "axios";
 import Spinner from "react-bootstrap/Spinner";
 import { Link } from "react-router-dom";
@@ -7,14 +7,17 @@ import pollen from "../../images/Ambrossia.png";
 import "./story.css";
 import Stories from "../../ReusedComponent/Stories";
 import Carousel from "../../ReusedComponent/Carousel";
-const url0 = "https://fakerapi.it/api/v1/books?_quantity=6";
+import { dataContext } from "../../App";
+const url0 = "https://fakerapi.it/api/v1/books?_quantity=12";
 const url1 =
   "https://fakerapi.it/api/v1/persons?_quantity=5&_gender=male&_birthday_start=2005-01-01";
 const url2 = "https://fakerapi.it/api/v1/users?_quantity=3&_gender=male";
+
 const Story = () => {
-  const [data0, setdata0] = useState([]);
-  const [data1, setdata1] = useState([]);
-  const [data2, setdata2] = useState([]);
+  const { data0, data1, data2, setdata0, setdata1, setdata2 } = useContext(
+    dataContext
+  );
+
   const style1 = {
     // border: "1px solid red",
     display: "flex",
@@ -93,11 +96,21 @@ const Story = () => {
           <div style={style1} className="row">
             {data0.map(item => {
               return (
-                <Stories
-                  stuffs={[item, data1, data2]}
+                <Link
                   className="col-sm"
-                  key={item.id}
-                />
+                  style={{
+                    width: "22rem",
+                    border: "none",
+                    textDecoration: "none"
+                  }}
+                  to={`/MyStory/${item.id}`}
+                >
+                  <Stories
+                    stuffs={[item, data1, data2]}
+                    // className="col-sm"
+                    key={item.id}
+                  />
+                </Link>
               );
             })}
           </div>

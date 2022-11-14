@@ -78,7 +78,7 @@ const Stories = ({ stuffs }) => {
           <AiOutlineComment />
           <span style={{ whiteSpace: "nowrap" }}>{item.genre}</span>
         </small>
-        <Card.Text style={style4}>{item.description}</Card.Text>
+        <Card.Text style={style4}>{`${(item.description).length < 10? item.description:item.description.slice(0, 40)}....`}</Card.Text>
         <Button style={style5} variant="outline-light">
           <span
             style={{

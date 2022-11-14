@@ -19,6 +19,7 @@ import logo33 from "../../images/logo33.png";
 import logo22 from "../../images/logo22.png";
 import logo6 from "../../images/logo6.png";
 import logo5 from "../../images/logo5.png";
+import { Link, Outlet } from "react-router-dom";
 
 const About = () => {
   // const content = {
@@ -114,7 +115,6 @@ const About = () => {
               autem odit illum soluta ratione.
             </p>
             <Button variant="warning" className="button">
-              {" "}
               Learn More
             </Button>
           </div>
@@ -132,7 +132,6 @@ const About = () => {
             </p>
             <div className="blank">
               <a href="https://twitter.com/babanfada" target={"blank"}>
-                {" "}
                 <FaTwitter className="icon" />
               </a>
 
@@ -140,7 +139,6 @@ const About = () => {
                 href="https://www.youtube.com/channel/UCIrZcA8mxJ3ETKxWTO-YuLw"
                 target={"blank"}
               >
-                {" "}
                 <SiYoutube className="icon" />
               </a>
             </div>
@@ -180,7 +178,6 @@ const About = () => {
               autem odit illum soluta ratione.
             </p>
             <Button variant="warning" className="button">
-              {" "}
               Learn More
             </Button>
           </div>
@@ -220,13 +217,14 @@ const About = () => {
               autem odit illum soluta ratione.
             </p>
             {/* <Button variant="warning" className="button">
-              {" "}
+             
               Learn More
             </Button> */}
           </div>
         </div>
       </div>
       {/* section 5 */}
+
       <div data-aos="zoom-out" className={"partners"}>
         <img src={logo1} alt={"draft"} />
         <img src={logo22} alt={"draft"} />
@@ -236,6 +234,14 @@ const About = () => {
         <img src={logo5} alt={"draft"} />
         <img src={logo4} alt={"draft"} />
       </div>
+      {/* NB {to} should not have a / in Nested routes unlike th normal route where it does have */}
+      <Link to="trier">
+        <Button>click to see trier</Button>
+      </Link>
+      <Link to="trier2">
+        <Button>click to see trier2</Button>
+      </Link>
+      <Outlet />
     </div>
   );
 };
