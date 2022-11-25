@@ -11,8 +11,9 @@ import image10 from "../../images/working-bees.jpg";
 import image11 from "../../images/women.jpg";
 import image12 from "../../images/young.jpg";
 import image13 from "../../images/working-bees.jpg";
-import image14 from "../../images/bee1.jpg";
+import image14 from "../../images/wax-frame.jpg";
 import image15 from "../../images/bee2.jpg";
+import image15A from "../../images/bee1.jpg";
 import image16 from "../../images/bee3.jpg";
 import image17 from "../../images/bee4.jpg";
 import image18 from "../../images/Honey-removebg-preview.png";
@@ -372,7 +373,7 @@ const Home = () => {
         className="section7 container-md"
       >
         <div data-aos="slide-right" data-aos-delay="1000" className="testimage">
-          <img src={image16} alt="potrait" />
+          <img src={image15A} alt="potrait" />
         </div>
         <div data-aos="slide-left" data-aos-delay="1000" className="client">
           <p>Testimonial</p>

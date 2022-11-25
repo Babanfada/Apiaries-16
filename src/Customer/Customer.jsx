@@ -1,12 +1,11 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
-//import "swiper/css";
 
 import "swiper/swiper.min.css"; //this is very important
-import "swiper/modules/effect-cube/effect-cube.min.css"; //also this
-import "swiper/modules/pagination/pagination.min.css"; //also this
+import "swiper/css/effect-cube"; //also this
+import "swiper/css/pagination"; //also this
+
 import customerCss from "./Customer.module.css";
 // import required modules
 import { EffectCube, Pagination, Autoplay } from "swiper";

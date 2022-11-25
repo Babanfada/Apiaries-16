@@ -8,24 +8,7 @@ import { MdAlternateEmail } from "react-icons/md";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { BiSend } from "react-icons/bi";
 import { useForm } from "react-hook-form";
-// import { yupResolver } from "@hookform/resolvers/yup";
-// import * as yup from "yup";
 
-// const schema = yup
-//   .object()
-//   .shape({
-//     name: yup.string().required(),
-//     email: yup
-//       .string()
-//       .email()
-//       .required(),
-//     message: yup
-//       .string()
-//       .max(20)
-//       .min(10)
-//       .required()
-//   })
-//   .required();
 const Contact = () => {
   useEffect(() => {
     AOS.init({ duration: 2000, once: true });

@@ -4,9 +4,10 @@ import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import { Swiper, SwiperSlide } from "swiper/react";
+
 import "swiper/swiper.min.css"; //this is very important
-import "swiper/modules/navigation/navigation.min.css"; //also this
-import "swiper/modules/autoplay/autoplay.min.css"; //also this
+import "swiper/css/navigation"; //also this
+import "swiper/css/autoplay"; //also this
 
 //import "swiper/modules/free-mode/free-mode.min.css"; //also this
 //import "swiper/modules/thumbs/thumbs.min.css"; //also this

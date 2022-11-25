@@ -68,7 +68,7 @@ const Faqs = () => {
               autem odit illum soluta ratione.
             </p>
             <Link to="/Product">
-              <Button variant="warning" className="button">
+              <Button variant="outlined" color="warning" className="button">
                 Learn More
               </Button>
             </Link>

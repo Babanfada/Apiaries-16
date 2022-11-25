@@ -1,5 +1,5 @@
 import './error.css'
-import image from "../../images/22.png"
+import image from "../../images/24.png"
 import React from 'react'
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -15,7 +15,7 @@ const Error = () => {
   };
   return (
     <div style={style1}>
-      <img style={{ width: "20vw" }} src={image} />
+      <img style={{ width: "20vw" }} src={image} alt={"draft"} />
       <h1>NAH...!</h1>
       <h2>THIS PAGE DOES NOT EXIST</h2>
       <Link to="/">

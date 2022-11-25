@@ -7,9 +7,10 @@ import image12 from "../../images/young.jpg";
 import { FaTwitter } from "react-icons/fa";
 import { SiYoutube } from "react-icons/si";
 import image14 from "../../images/bee1.jpg";
-import image15 from "../../images/bee2.jpg";
-import image16 from "../../images/bee3.jpg";
-//import image17 from "../../images/bee4.jpg";
+import image15 from "../../images/horticulturist.jpg";
+import image16 from "../../images/emile.jpg";
+import image17 from "../../images/collecting_pollen.jpg";
+import image18 from "../../images/collecting_honey.jpg";
 import image13 from "../../images/working-bees.jpg";
 import Keeepers from "../../ReusedComponent/Keeepers";
 import logo1 from "../../images/logo1.png";
@@ -22,15 +23,10 @@ import logo5 from "../../images/logo5.png";
 import { Link, Outlet } from "react-router-dom";
 
 const About = () => {
-  // const content = {
-  //   h1: "About Us",
-  //   p:
-  //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, dolorunatus accusamus facere nam consequatur odit quae sequi dignissimonihil.Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, dolorunatus accusamus facere nam consequatur odit quae sequi dignissimonihil.",
-  //   buttonText: "Learn More"
-  // };
+  
   const keepersContent = [
     {
-      image: image12,
+      image: image18,
       nameOfkeeper: "Ibrahim Tolani",
       description: "Apiarist",
       text:
@@ -72,7 +68,7 @@ const About = () => {
       dataAos: "fade-up"
     },
     {
-      image: image15,
+      image: image17,
       nameOfkeeper: "Smith Rowe",
       description: "Beekeeper",
       text:
@@ -145,7 +141,7 @@ const About = () => {
           </div>
           <div className="col-sm-1"></div>
           <div data-aos="zoom-in-left" className="col-sm star  ">
-            <img src={image14} alt="draft" className="blank1" />
+            <img src={image16} alt="draft" className="blank1" />
           </div>
         </div>
       </div>
@@ -185,7 +181,7 @@ const About = () => {
           <img
             style={{ paddingTop: "3vh", borderRadius: "10px" }}
             data-aos="fade-down-left"
-            src={image16}
+            src={image14}
             className="col-sm"
             alt={"draft"}
           />
